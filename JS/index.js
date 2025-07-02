@@ -47,7 +47,6 @@ function getdata(city) {
 
   request.addEventListener("load", function () {
     var recipes = JSON.parse(request.response);
-    console.log(recipes);
     display(recipes);
     localStorage.setItem("weather", JSON.stringify(recipes));
   });
@@ -68,12 +67,12 @@ function display(data) {
           </div>
           <h6 class="text-white location py-2">${data[i].name}</h6>
           <h1 class="text-white degree">${data[i].lat}℃</h1>
-          <img src="./Weather/imgi_6_113.png" alt="">
+          <img src="Weather/imgi_6_113.png" alt="">
           <span class="text-info">sunny</span>
           <div class="icons">
-            <span class="px-2"><img src="./Weather/imgi_3_icon-umberella.png" alt=""><small class="text-white">${data[i].lon}</small></span>
-            <span class="px-2"><img src="./Weather/imgi_4_icon-wind.png" alt=""></span>
-            <span class="px-2"><img src="./Weather/imgi_5_icon-compass.png" alt=""></span>
+            <span class="px-2"><img src="Weather/imgi_3_icon-umberella.png" alt=""><small class="text-white">${data[i].lon}</small></span>
+            <span class="px-2"><img src="Weather/imgi_4_icon-wind.png" alt=""></span>
+            <span class="px-2"><img src="Weather/imgi_5_icon-compass.png" alt=""></span>
           </div>
         </div>
 
@@ -82,7 +81,7 @@ function display(data) {
             <div>${two_day}</div>
           </div>
           <div class="data d-flex align-items-center flex-md-column py-5">
-            <img src="./Weather/imgi_6_113.png" class="text-center" alt="">
+            <img src="Weather/imgi_6_113.png" class="text-center" alt="">
             <h1 class="text-white degree">${data[i].lat}℃</h1>
             <span class="text-center text-white">${data[i].lon}</span>
             <span class="text-info text-center">sunny</span>
@@ -94,7 +93,7 @@ function display(data) {
             <div>${three_day}</div>
           </div>
           <div class="data d-flex align-items-center flex-md-column py-5">
-            <img src="./Weather/imgi_6_113.png" class="text-center" alt="">
+            <img src="Weather/imgi_6_113.png" class="text-center" alt="">
             <h1 class="text-white degree">${data[i].lat}℃</h1>
             <span class="text-center text-white"><small>${data[i].lon}</small></span>
             <span class="text-info text-center">sunny</span>
